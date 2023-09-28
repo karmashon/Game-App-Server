@@ -101,7 +101,7 @@ async function main(){
     });
 
     app.get("/*",function(req,res){
-        res.write("Server running on port: "+port);
+        res.end("Server running on port: "+port);
     });
     app.post("/addUser",async function(req,res){
         var newName = req.body.uname;
