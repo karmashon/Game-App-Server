@@ -100,7 +100,7 @@ async function main(){
         console.log("Server listening on port: "+port); 
     });
 
-    app.get("/",function(req,res){
+    app.post("/",function(req,res){
         res.write("Server running on port: "+port);
     });
     app.post("/addUser",async function(req,res){
