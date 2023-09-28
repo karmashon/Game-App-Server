@@ -10,7 +10,7 @@ const app = express();
 // Create a new sequelize instance with mysql database info
 const sequelize = new sequelizer.Sequelize(process.env.DB_NAME,process.env.DB_USER,process.env.DB_PWD,
 {
-    host:"mysql-0721-gamification.aivencloud.com",
+    host:process.env.DB_HOST,
     dialect:"mysql"
 });
 
