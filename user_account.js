@@ -100,6 +100,9 @@ async function main(){
         console.log("Server listening on port: "+port); 
     });
 
+    app.get("/",function(req,res){
+        res.write("Server running on port: "+PORT);
+    });
     app.post("/addUser",async function(req,res){
         var newName = req.body.uname;
         var newPwd = req.body.password + pwdSalt;
