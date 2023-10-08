@@ -77,6 +77,13 @@ async function main(){
         console.log("Server listening on port: "+port); 
     });
 
+    // Test get endpoint for verifying server state
+    app.get("/*",function(req,res)
+    {
+        res.write("Server functioning now\n");
+        res.end("Test GET called on: "+req.path);
+    })
+
     // Endpoint for register
     app.post("/addUser",async function(req,res){
         var newName = req.body.uname;
